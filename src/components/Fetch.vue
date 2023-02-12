@@ -11,7 +11,7 @@ export default {
       type: Function,
       required: true
     },
-    params: {
+    query: {
       type: String,
       default: ''
     }
@@ -25,24 +25,24 @@ export default {
   },
   methods: {
     async fetchData () {
-      const { callApi } = this
-      this.loading = true
+      const { callApi } = this;
+      this.loading = true;
 
       try {
-        const data = await callApi(this.params)
-        this.data = data
+        const data = await callApi(this.query);
+        this.data = data;
       } catch (error) {
-        this.error = error
+        this.error = error;
       } finally {
-        this.loading = false
+        this.loading = false;
       }
     }
   },
   watch: {
-    params: {
+    query: {
       immediate: true,
       handler (value) {
-        value && this.fetchData()
+        value && this.fetchData();
       }
     }
   }

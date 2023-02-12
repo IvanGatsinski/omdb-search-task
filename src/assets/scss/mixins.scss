@@ -1,0 +1,21 @@
+@mixin whenScreenIs($class) {
+  @if $class == mobile-xs {
+    @media (max-width: 450px) {
+      @content;
+    }
+  } @else if $class == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == tablet {
+    @media (max-width: 1025px) {
+      @content;
+    }
+  } @else if $class == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint not supported!";
+  }
+}

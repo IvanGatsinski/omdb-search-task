@@ -1,5 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Layout>
+      <router-view />
+    </Layout>
   </div>
 </template>
+
+<script>
+import Layout from './Layout.vue';
+export default {
+  components: {
+    Layout
+  }
+}
+</script>

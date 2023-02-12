@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $bold-font;
+  color: $primary-text-color;
+  text-decoration: underline;
+}
+
+p,
+li,
+label,
+input {
+  font-family: $regular-font;
+  color: $primary-text-color;
+}
+
+span {
+  font-family: $light-font;
+}

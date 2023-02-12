@@ -1,15 +1,13 @@
 <template>
-  <div>
-    Not Found
-  </div>
+  <p class="not-found">Page Not Found</p>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss" scoped>
+@import '@/assets/scss/site.scss';
 
+.not-found {
+  text-align: center;
+  color: $not-found;
+  font-size: 5rem;
+}
 </style>
